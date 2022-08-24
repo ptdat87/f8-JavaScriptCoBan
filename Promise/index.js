@@ -96,5 +96,11 @@ Promise.all([promise2, promise1]).then((result) => {
 });
 
 const promise4 = new Promise((resole) => {
-    setTimeout((  () => {return 1000;   }).then(() => {return resole([1, 2, 3]);)
-})
+    setTimeout(
+        (() => {
+            return 1000;
+        }).then(() => {
+            return resole([1, 2, 3]);
+        })
+    );
+});
