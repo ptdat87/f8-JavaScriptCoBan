@@ -13,11 +13,12 @@ export function createStore(reduce) {
 
     function render() {
         for (const [root, component] of roots) {
+            console.log("1", [component]);
             const output = component();
             root.innerHTML = output;
         }
-        console.log(state);
-        console.log(roots);
+        // console.log(state);
+        // console.log(roots);
     }
 
     return {
@@ -26,13 +27,16 @@ export function createStore(reduce) {
             render();
         },
 
-        connect(selector = (state) => state) {
+        connect(selector = (statePA) => statePA) {
             return (component) =>
-                (props, ...args) =>
-                    component(
+                (props, ...args) => {
+                    console.log("2", [component]);
+                    return component(
                         Object.assign({}, props, selector(state), ...args)
                     );
+                };
         },
+
         dispatch(action, ...args) {
             state = reducer(state, action, args);
             render();

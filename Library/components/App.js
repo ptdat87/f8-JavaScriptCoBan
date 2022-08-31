@@ -5,6 +5,7 @@ const connector = connect();
 const isSuccess = true;
 
 function App({ cars }) {
+    // console.log("cars", cars);
     return html`
         <h3>${isSuccess && "Successfully"}</h3>
         <ul>
@@ -13,5 +14,8 @@ function App({ cars }) {
         <button onclick="dispatch('ADD', 'Porsche')">Add car</button>
     `;
 }
+
+// const a = connector(App);
+// console.log("a:", [a]);
 
 export default connector(App);
