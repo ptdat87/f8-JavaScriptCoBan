@@ -1,0 +1,10 @@
+var a = 5;
+var a1 = 5;
+var a2 = 5;
+var b = 2;
+console.log("a * b = ", a * b);
+console.log("a / b = ", a / b);
+console.log("a % b = ", a % b);
+console.log("b += 1 ", (b += 1));
+console.log("a1++  ", ++a1);
+console.log("a2++  ", a2++);
