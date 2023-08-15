@@ -1,7 +1,7 @@
 const emailKey = "email";
 
 const myInfo = {
-    name: "My Name",
+    name: "Dat Pham",
     age: 20,
     "địa chỉ": "Hồ Chí Minh",
     [emailKey]: "mymail@gmail.com",
@@ -14,7 +14,6 @@ const myInfo = {
 
 //Delete a properties
 delete myInfo.age;
-
 console.log(myInfo);
 console.log(myInfo.name, " - ", myInfo["name"], " - ", myInfo.email);
 console.log(myInfo.getname());

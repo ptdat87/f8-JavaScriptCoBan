@@ -11,13 +11,13 @@ function User(firstName, lastName, avatar) {
 User.prototype.className = "F8";
 User.newkey = "new value";
 
-const author = new User("Dat", "PT", "url author avatar");
-const user = new User("User1", "Last1", "url user avatar");
+const author = new User("mr Author", "Lastname", "url author avatar");
+const user = new User("mr User", "Lastname", "url user avatar");
 
 author.title = "Chia se dao tai F8";
 user.comment = "Lieu con khoa asp.net không";
 
-console.log(author.constructor);
+console.log("constructor is User? : ", author.constructor === User);
 console.log(author);
 console.log(user);
 console.log(user.getName());
